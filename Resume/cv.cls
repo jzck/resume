@@ -7,23 +7,16 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[frenchb]{babel}
-% For neater titles
+
 \RequirePackage{titlesec}
-% For page layout
 \RequirePackage{geometry}
-% For icons
 \RequirePackage{fontawesome}
-% For links
 \RequirePackage{hyperref}
-% For colors
 \RequirePackage{xcolor}
 \definecolor{orange}{RGB}{255,127,0}
 \definecolor{green}{RGB}{0,102,51}
-% For images
 \RequirePackage{graphicx}
-% For justifying
 \RequirePackage{ragged2e}
-% For decorations
 \RequirePackage{adforn}
 
 % Remove page numbering
@@ -66,7 +59,6 @@
 }
 
 % Contact information
-
 
 % Skill title
 \newcommand{\skilltitle}[1]{

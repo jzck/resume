@@ -6,29 +6,19 @@
 % UTF8
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
+\RequirePackage[frenchb]{babel}
 
-% For neater titles
-\RequirePackage{titlesec}
+\RequirePackage{titlesec} % For neater titles
+\RequirePackage{geometry} % For page layout
+\RequirePackage{fontawesome} % For icons
+\RequirePackage{hyperref} % For links
+\RequirePackage{xcolor} % For colors
+\RequirePackage{graphicx} % For images
+\pagenumbering{gobble} % Remove page numbering
+\RequirePackage{adforn} % For decorations
 
-% For page layout
-\RequirePackage{geometry}
-
-% For icons
-\RequirePackage{fontawesome}
-
-% For links
-\RequirePackage{hyperref}
-
-% For colors
-\RequirePackage{xcolor}
 \definecolor{orange}{RGB}{255,127,0}
 \definecolor{green}{RGB}{0,102,51}
-
-% For images
-\RequirePackage{graphicx}
-
-% Remove page numbering
-\pagenumbering{gobble}
 
 % Margins
 \geometry{
@@ -63,6 +53,7 @@
 \newcommand{\name}[1]{
     \centerline{\textbf{\textit{\Huge{#1}}}}
     \vspace{2mm}
+    \centerline{\Huge{\adforn{54}}}
 }
 
 % Contact information
