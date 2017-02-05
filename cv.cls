@@ -8,6 +8,10 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[frenchb]{babel}
 
+\RequirePackage{mdframed}
+\RequirePackage{multicol}
+\RequirePackage{vwcol}
+\RequirePackage{movie15}
 \RequirePackage{titlesec} % For neater titles
 \RequirePackage{geometry} % For page layout
 \RequirePackage{fontawesome} % For icons
@@ -22,50 +26,58 @@
 
 % Margins
 \geometry{
-    left=20mm,
-    right=20mm,
-    top=24mm,
-    bottom=24mm
+	left=20mm,
+	right=20mm,
+	top=10mm,
+	bottom=15mm,
 }
 
 % Customize \section
-\titleformat{\section}
-    % Large, small capitals, left aligned
-    {\large\scshape\raggedright}
-    {}{0em}
-    % No numbering
-    {}
-    % Horizontal line after the heading
-    [\titlerule]
+\renewcommand{\section}[1]{
+	\noindent
+	\begin{mdframed}
+		\large\scshape\raggedright #1
+	\end{mdframed}
+}
 
 % Customize \subsection
 \titleformat{\subsection}
-    {\large\bfseries\raggedright}
-    {}{0em}
-    {}
+{\large\bfseries\raggedright}
+{}{0em}
+{}
 
 % Possibility to add a date to a subsection
 \newcommand{\datedsubsection}[2]{
-    \subsection[#1]{#1 \hfill \textsl{\small{#2}}}
+	\subsection[#1]{#1 \hfill \textsl{\small{#2}}}
+}
+
+\newenvironment{cv_content}
+{
+	\begin{flushright}
+		\begin{minipage}{.95\textwidth}
+		}
+			{
+		\end{minipage}
+	\end{flushright}
 }
 
 % Name
 \newcommand{\name}[1]{
-    \centerline{\textbf{\textit{\Huge{#1}}}}
-    \vspace{2mm}
-    \centerline{\Huge{\adforn{54}}}
+	\centerline{\textbf{\textit{\Huge{#1}}}}
+	\vspace{2mm}
+	\centerline{\Huge{\adforn{54}}}
 }
 
 % Contact information
 
 % Skill title
 \newcommand{\skilltitle}[1]{
-    \vspace{2mm}
-    \textbf{#1} \\
+	\vspace{2mm}
+	\textbf{#1} \\
 }
 
 % Skill description
 \newcommand{\skilldesc}[1]{
-    \vspace{2mm}
-    #1 \\
+	\vspace{2mm}
+#1 \\
 }
