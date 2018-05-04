@@ -26,8 +26,8 @@
 
 % Margins
 \geometry{
-	left=20mm,
-	right=20mm,
+	left=10mm,
+	right=10mm,
 	top=10mm,
 	bottom=15mm,
 }
