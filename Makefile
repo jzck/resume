@@ -1,8 +1,8 @@
 RESUME	=	resume.pdf
 
-RM		=	/bin/rm -f
-SRC		=	$(shell ls -1 parts)
-CC		=	pdflatex
+RM	=	rm -f
+SRC	=	$(shell ls -1 parts)
+CC	=	pdflatex
 
 .PHONY: $(SRC)
 
@@ -15,6 +15,6 @@ clean:
 	$(RM) *.aux *.log *.toc *.out
 
 fclean: clean
-	$(RM) $(SHORT) $(LONG)
+	$(RM) $(RESUME)
 
 re: fclean all
